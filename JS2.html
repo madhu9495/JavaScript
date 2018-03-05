@@ -1,44 +1,39 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Page Title</title>
-	<script>
-	var Employee= [{  
-    "Name": "John",  
-    "Experience": "12",  
-    "Technology": "SharePoint"  
-}, {  
-    "Name": "Charles",  
-    "Experience": "9",  
-    "Technology": "ASP.NET"  
-}, {  
-    "Name": "Jo",  
-    "Experience": "3",  
-    "Technology": "JAVA"  
-}, {  
-    "Name": "Daine",  
-    "Experience": "7",  
-    "Technology": "Sql Server"  
-}, {  
-    "Name": "Zain",  
-    "Experience": "6",  
-    "Technology": "C#"  
-}];
-
-Employee.sort(function (a,b){
-	return a.Experience-b.Experience
-})</script>
-</head>
 <body>
-<ul>
+<div id="json"></div>
 <script>
-document.write("<h3>After Sorting</h3>")
-for(i=0;i<Employee.length;i++){
-document.write('<h4>'+Employee.Name+'</h4>');
-document.write('<h4>'+Employee.Experience+'</h4>');
-document.write('<h4>'+Employee.Technology+'</h4>');
+        var employee= [
+	{  
+    "name": "John",  
+    "experience": "12",  
+    "technology": "SharePoint"  
+     }, {  
+    "name": "Jo",  
+    "experience": "3",  
+    "technology": "JAVA"  
+     },{ 
+    "name": "Charles",  
+    "experience": "9",  
+    "Technology": "ASP.NET"  
+     }];
+var divId = document.getElementById("json")
+function display(){
+
+for(i=0;i<employee.length;i++){
+for(var key in employee[i]){
+
+ divId.innerHTML = divId.innerHTML + '<h4>'+key+ ' : ' + employee[i][key]+'</h4>';
 }
+}
+}
+display();
+employee.sort(function (a,b){
+	return a.experience-b.experience
+});
+divId.innerHTML = divId.innerHTML +"<br>"+"</br>";
+divId.innerHTML = divId.innerHTML +"<h3>"+"Sorted Array of Objects"+"</br>";
+display();
 </script>
-</ul>
 </body>
 </html>
