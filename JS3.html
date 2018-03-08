@@ -1,22 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Page Title</title>
+	<title>URL Parser</title>
 <script>
 function Urlparsing(){
 var parser = document.createElement('a');
 parser.href = document.getElementById("URL").value;
 var result=document.getElementById("demo");
-result.innerHTML = '<h4>'+parser.href+'</h4>'+'<br>'+'<h4>'+parser.protocol+'</h4>'+'<br>'+
-'<h4>'+parser.hostname+'</h4>'+'<br>'+'<h4>'+parser.port+'</h4>'+'<br>'+'<h4>'+parser.pathname+'</h4>'+'<br>'+'<h4>Query Parameters :</h4>'+'<br>';
-
+result.innerHTML = '<h4>'+parser.href+'</h4>'+'<h4>Protocol :'+parser.protocol+'</h4>'+
+'<h4>Hostname :'+parser.hostname+'</h4>'+'<h4>Port :'+parser.port+'</h4>'+'<h4>Pathname :'+parser.pathname+'</h4>'+'<h4>Query Parameters :</h4>';
 var queries=parser.search.substring(1).split("&");
-
 for(var i=0;i<queries.length;i++){
-result.innerHTML = result.innerHTML +'<h4>'+queries[0]+'</h4>'+'<br>';
+result.innerHTML = result.innerHTML +'<h4>'+queries[i]+'</h4>';
 }
-
-
 }
 </script>
 </head>
@@ -29,7 +25,6 @@ ENTER URL<input type="text" name="url" id="URL" size="60">
 <input type="submit" value="Submit" onclick="Urlparsing(); return false">
 </form>
 </div>
-<br>Result
 <div id="demo" align=center>
 </div>
 </body>
