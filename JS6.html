@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+var Mywindow=null;
+function OpenWindow(){
+if(Mywindow == null || Mywindow.closed){
+Mywindow=window.open("https://www.google.co.in"); // Opens new window
+}
+else{
+window.alert("Already Clicked the image!! So Close Opened window");
+}
+}
+
+function closeWin() {
+    Mywindow.close();   // Closes the new window
+}
+</script>
+</head>
+<body>
+<div align="center">
+<h2>Click the Image</h2>
+<img src="Bike.jpg" alt="Bike" width="600" height="377" onclick="OpenWindow()">
+<br>
+<button onclick="closeWin()">Close</button>
+</div>
+</body>
+</html>
