@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Image RollOver</title>
+<script>
+        function MouseRollover(Image) {
+         Image.src = "cat.jpg";
+    }
+        function MouseOut(Image) {
+                Image.src = "car.jpg";
+    }
+	function MouseRollover1(Image) {
+         Image.src = "bottle.jpg";
+    }
+        function MouseOut1(Image) {
+                Image.src = "bicycle.jpg";
+    }
+	function MouseRollover2(Image) {
+         Image.src = "leaf.jpeg";
+    }
+        function MouseOut2(Image) {
+                Image.src = "tree.jpg";
+    }
+</script>
+</head>
+<body>
+<div align="center">
+<img src="car.jpg" boarder="0px" width="650px" height="500px"
+onMouseOver="MouseRollover(this)" 
+onMouseOut="MouseOut(this)" />
+</div>
+<div align="center">
+<img src="bicycle.jpg" boarder="0px" width="650px" height="500px"
+onMouseOver="MouseRollover1(this)" 
+onMouseOut="MouseOut1(this)" />
+</div>
+
+<div align="center">
+<img src="tree.jpg" boarder="0px" width="650px" height="500px" 
+onMouseOver="MouseRollover2(this)" 
+onMouseOut="MouseOut2(this)" />
+</div>
+</body>
+</html>
