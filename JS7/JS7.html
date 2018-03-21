@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<title>W3.CSS</title>
+<title>Slideshow</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <body>
@@ -37,7 +37,14 @@ function showDivs(n) {
   }
   else {
   r.style.display="block";
-  }  
+  }
+  if (n == 1) {
+  l.style.display="none";
+  }
+  else {
+  l.style.display="block";
+  }
+  
   for (i = 0; i < x.length; i++) {
      x[i].style.display = "none";  
   }
