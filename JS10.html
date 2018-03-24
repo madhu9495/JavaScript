@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function array(){
+var fsub, text, fLen, i;
+
+fsub = ["Physics", "Maths", "Computers", "Statistics", "Chemistry", "Biology", "Astronomy"];
+fLen = document.myform.display.value;
+text = "<ul>";
+if(fLen>fsub.length){
+fLen= fsub.length;
+}
+if(fLen==0)
+{ window.alert("Please enter number greater than 1");
+}
+for (i = 0; i < fLen; i++) {
+    text += "<li>" + fsub[i] + "</li>";
+}
+text += "</ul>";
+document.getElementById("demo").innerHTML = text;
+}
+</script>
+</head>
+<body>
+<div align="center">
+<h2>JavaScript Arrays</h2>
+<form name="myform">
+Enter Number to print array elements <input type="number" name="display" min="1" max="100"/>
+<input  type="button" name="submit" value="submit" onclick="array();" />
+</form>
+</div>
+<br>
+<div id="demo">
+</div>
+</body>
+</html>
